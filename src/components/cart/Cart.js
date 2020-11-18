@@ -6,7 +6,7 @@ import CartTotals from "./CartTotals";
 import Columns from "./Columns";
 import EmptyCart from "./EmptyCart";
 
-export default function Cart() {
+export default function Cart({ history }) {
   return (
     <section>
       <ProductConsumer>
@@ -18,7 +18,7 @@ export default function Cart() {
                 <Title name="Your" title="Cart" />
                 <Columns />
                 <CartList value={value} />
-                <CartTotals value={value} />
+                <CartTotals value={value} history={history} />
               </>
             );
           } else {
